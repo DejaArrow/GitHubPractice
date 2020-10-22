@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace polymorphism
 {
@@ -13,8 +14,20 @@ namespace polymorphism
             Console.WriteLine("Double: " + addedSumOfDoubles);
 
             //animal section
+
+            List<Animal> animals = new List<Animal>();
             Animal animal = new Animal();
-            animal.MakeAnimalSound();
+            Animal cat = new Cat();
+            Animal llama = new Llama();
+
+            animals.Add(animal);
+            animals.Add(cat);
+            animals.Add(llama);
+
+            foreach(Animal a in animals)
+            {
+                a.MakeAnimalSound();
+            }
         }
 
         static int AddTwoNumbers(int x, int y)
